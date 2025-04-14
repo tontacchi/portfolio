@@ -113,9 +113,54 @@ nav .links a.active {
 	border-radius: 7px;
 	display: flex;
 	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.about .left .info .buttons button.hire {
+	color: #fff;
+	background: #388e3c;
+	border: 1px solid #171717;
+}
+
+.about .left .info .buttons button.hire:hover {
+	background: #4caf59;
+}
+
+.about .left .info .buttons button.email {
+	color: #bdbdbd;
+	background: #171717;
+	border: 1px solid #27272a;
+}
+
+.about .left .info .buttons button.email:hover {
+	background: #000;
+}
+
+.about .right a.online {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	background: #171717;
+	border: 1px solid: #27272a;
+	padding: 4px 15px;
+	border-radius: 14px;
+	font-size: 13px;
+}
+
+.about .right a.online i {
+	color: #4caf59;
+	font-size: 9px;
 }
 
 .about .right img {
 	width:  200px;
 	height: 200px;
+	border-radius: 50%;
+	border: 8px solid #2c2c2c;
+	object-fit: cover;
+	margin-top: 70px;
 }
+

@@ -138,7 +138,8 @@ nav .links a.active {
 	background: #000;
 }
 
-.about .right a.online {
+.about .right a.online,
+footer a.online {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -150,7 +151,8 @@ nav .links a.active {
 	font-size: 13px;
 }
 
-.about .right a.online i {
+.about .right a.online i,
+footer a.online i {
 	color: #4caf59;
 	font-size: 9px;
 }
@@ -275,4 +277,32 @@ nav .links a.active {
 
 .works .right .item:not(:first-child) p {
 	font-size: 15px;
+}
+
+footer {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #18181b;
+	border: 1px solid #27272a;
+	padding: 45px;
+	border-radius: 14px;
+}
+
+footer > a {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+footer .socials {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+footer .socials a {
+	font-size: 20px;
+	font-weight: 500;
+	color: #bdbdbd;
 }

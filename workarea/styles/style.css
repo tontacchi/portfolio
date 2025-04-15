@@ -21,7 +21,7 @@ a:hover {
 body {
 	background: #171717;
 	padding: 20px;
-	animation: fadeInAnimation ease 2s;
+	animation: fadeInAnimation ease 1.5s;
 }
 
 nav {
@@ -305,4 +305,105 @@ footer .socials a {
 	font-size: 20px;
 	font-weight: 500;
 	color: #bdbdbd;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 1220px) {
+	.about {
+		padding: 60px 30px;
+	}
+
+	.works {
+		flex-direction: column;
+	}
+
+	.works .left,
+	.works .right .item,
+	footer {
+		padding: 40px 30px;
+	}
+
+	.works .right {
+		grid-template-rows: auto auto;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	nav .links {
+		padding: 0 40px;
+	}
+
+	footer > a {
+		font-size: 20px;
+	}
+
+	footer .socials a {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	nav .links a {
+		font-size: 16px;
+	}
+
+	.about {
+		flex-direction: column-reverse;
+		gap: 20px;
+		padding: 30px;
+	}
+
+	.about .left .info {
+		margin-top: 30px;
+	}
+
+	.about .right img {
+		margin-top: 20px;
+	}
+
+	footer a.online {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.about .left .info h2 {
+		font-size: 30px;
+	}
+
+	.about .left .info p,
+	.works .left .works-list .item .work-info p,
+	.works .left .works-list .item .work-info > p {
+		font-size: 16px;
+	}
+
+	.about .left .info .buttons button {
+		font-size: 14px;
+	}
+
+	.works .left .works-list {
+		margin-top: 40px;
+	}
+
+	.works .left .works-list .item .work-info h5,
+	.works .right .item a {
+		font-size: 20px;
+	}
+
+	.works .right .item > p,
+	.works .right .item:not(:first-item) a {
+		font-size: 15px;
+	}
+
+	.works .right .item:not(:first-item) p {
+		font-size: 13px;
+	}
 }

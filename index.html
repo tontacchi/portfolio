@@ -15,7 +15,7 @@
   <!-- custom stylesheets -->
   <link rel="stylesheet" href="public/build/tailwind.css">
 
-  <title></title>
+  <title>Portfolio</title>
 </head>
 
 <body class="font-sans text-gray-900 dark:text-white bg-white dark:bg-dark-background transition-colors duration-300">
@@ -27,13 +27,17 @@
   <!-- header -->
   <header class="fixed w-full top-0 z-50 bg-white/95 dark:bg-dark-background/95 backdrop-blur-sm shadow-sm transition-all duration-300">
     <div class="container mx-auto px-4">
+
+      <!-- navbar -->
       <nav class="flex justify-between items-center py-4">
 
+        <!-- left section username -->
         <div class="flex items-center">
           <span class="text-xl font-extrabold">Tontacchi</span>
           <span class="text-primary text-2xl ml-1">•</span>
         </div>
 
+        <!-- middle section links -->
         <ul class="flex space-x-8">
           <li>
             <a href="#features" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Showcase</a>
@@ -55,6 +59,21 @@
             <a href="#features" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
           </li>
         </ul>
+
+        <!-- right section dark mode toggle -->
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle">
+            <i class="fa-solid fa-moon text-gray-600 dark:text-gray-400"></i>
+          </button>
+
+          <button id="menu-toggle" class="md:hidden p-2">
+            <div class="w-6 h-5 flex flex-col justify-between">
+              <span class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"></span>
+              <span class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"></span>
+              <span class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"></span>
+            </div>
+          </button>
+        </div>
       </nav>
     </div>
   </header>

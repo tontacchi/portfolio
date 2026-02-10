@@ -16,6 +16,7 @@ function addDarkModeToggle() {
 	listen(root, "keydown", (event) => {
 		if (event.key === "d") {
 			root.classList.toggle("dark");
+			console.log("[ DEBUG ] enabled dark mode");
 		}
 	});
 }

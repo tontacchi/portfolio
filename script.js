@@ -3,21 +3,26 @@ const listen = (node, eventType, func) => { node.addEventListener(eventType, fun
 
 function main() {
 	// liquidate js behavior
-	addDarkModeToggle();
+	addDarkModeToggles();
 
 	console.log("finished loading");
 }
 
 
-function addDarkModeToggle() {
+function addDarkModeToggles() {
 	// applies .dark to <html> root element -> toggles dark mode from tailwind emitted css
 	const root = $("html");
+	const moon = $("theme-toggle");
 
 	listen(root, "keydown", (event) => {
 		if (event.key === "d") {
 			root.classList.toggle("dark");
-			console.log("[ DEBUG ] enabled dark mode");
+			console.log("[ DEBUG ] toggled dark mode via keyboard");
 		}
+	});
+	listen(moon, "click", (event) => {
+		root.classList.toggle("dark");
+		console.log("[ DEBUG ] toggled dark mode via moon");
 	});
 }
 

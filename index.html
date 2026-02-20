@@ -503,7 +503,7 @@
 
             <h3 class="text-xl font-bold mb-2">Email</h3>
 
-            <p class="text-gray-600 dark:text-gray-400">tontacchi@hoyo.lab</p>
+            <p class="text-gray-600 dark:text-gray-400 transition-colors">tontacchi@hoyo.lab</p>
           </div>
 
           <!-- Location -->
@@ -514,7 +514,7 @@
 
             <h3 class="text-xl font-bold mb-2">Location</h3>
 
-            <p class="text-gray-600 dark:text-gray-400">Liyue, Teyvat</p>
+            <p class="text-gray-600 dark:text-gray-400 transition-colors">Liyue, Teyvat</p>
           </div>
 
           <!-- Socials -->
@@ -547,14 +547,36 @@
             </h3>
 
             <div class="space-y-6">
+              <!-- Name -->
               <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors">
                   Name
                 </label>
 
-                <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 ring-primary focus:border-transparent outline-none transition-colors">
-
+                <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 ring-primary focus:border-transparent outline-none transition-colors">
               </div>
+
+              <!-- Email -->
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors">
+                  Email
+                </label>
+
+                <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 ring-primary focus:border-transparent outline-none transition-colors">
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors">
+                  Message
+                </label>
+
+                <textarea type="email" name="message" id="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 ring-primary focus:border-transparent outline-none transition-colors"></textarea>
+              </div>
+
+              <button type="submit" class="w-full px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-300/30 dark:hover:shadow-blue-500/20 shadow-blue-200/20 dark:shadow-blue-700/10">
+                Send Message
+              </button>
             </div>
           </form>
         </div>

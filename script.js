@@ -15,10 +15,19 @@ function addDarkModeToggles() {
 	const moon = $("theme-toggle");
 
 	listen(root, "keydown", (event) => {
-		if (event.key === "d") {
-			root.classList.toggle("dark");
-			console.log("[ DEBUG ] toggled dark mode via keyboard");
-		}
+		if (event.key !== "d") { return; }
+
+		const active = document.activeElement;
+
+		if (active && (
+			active.tagName === "INPUT" ||
+			active.tagName === "TEXTAREA" ||
+			active.isContentEditable
+		)) { return; }
+
+		root.classList.toggle("dark");
+		console.log("[ DEBUG ] toggled dark mode via keyboard");
+
 	});
 	listen(moon, "click", (event) => {
 		root.classList.toggle("dark");

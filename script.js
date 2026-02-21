@@ -6,6 +6,7 @@ const listen = (node, eventType, func) => { node.addEventListener(eventType, fun
 function main() {
 	// liquidate js behavior
 	addDarkModeToggles();
+	addSmoothScrolling();
 
 	console.log("finished loading");
 }
@@ -68,6 +69,27 @@ function addDarkModeToggles() {
 
 		root.classList.toggle("dark");
 		console.log("[ DEBUG ] toggled dark mode via moon");
+	});
+}
+
+function addSmoothScrolling() {
+	$$$("a[href^=\"#\"]").forEach((anchor) => {
+		listen(anchor, "click", (event) => {
+			event.preventDefault();
+
+			const targetId = anchor.getAttribute("href");
+			const targetElement = $$(targetId);
+
+			if (targetElement) {
+				const headerHeight = $$("header").offsetHeight;
+				const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+				window.scrollTo({
+					top: targetPosition,
+					behavior: "smooth",
+				});
+			}
+		});
 	});
 }
 
